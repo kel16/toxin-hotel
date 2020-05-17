@@ -7,15 +7,14 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config = {
-  entry: {},
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './docs'),
     filename: 'scripts/[name].js',
     publicPath: '/',
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: 'dist',
+    contentBase: 'docs',
     historyApiFallback: {
       index: '/',
     },
@@ -109,24 +108,18 @@ fs.readdirSync(path.resolve(__dirname, 'src', 'pages'))
   });
 
 pages.forEach((fileName) => {
-  let fileChunks = [];
-
-  ['js', 'scss'].forEach((type) => {
-    let entryFile = `./src/pages/${fileName}/${fileName}.${type}`;
-    if (fs.existsSync(entryFile)) {
-      fileChunks.push(entryFile);
-    }
-  });
-
-  if (fileChunks.length) {
-    config.entry[fileName] = fileChunks;
-  }
-
   config.plugins.push(
     new HtmlWebpackPlugin({
+      getData: () => {
+        try {
+          return JSON.parse(fs.readFileSync(`./src/pages/${fileName}/data.json`, 'utf8'));
+        } catch (e) {
+          console.warn(`data.json was not provided for page ${fileName}`);
+          return {};
+        }
+      },
       filename: `${fileName}.html`,
       template: `src/pages/${fileName}/${fileName}.pug`,
-      chunks: fileName,
     }),
   );
 });
