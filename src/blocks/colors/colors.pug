@@ -1,0 +1,6 @@
+include __item/colors__item.pug
+
+mixin colors(items)
+  ul.colors&attributes(attributes)
+    each item in items
+      +colors__item(item.title, item.code, classname=item.class)(class="colors__color")

@@ -1,0 +1,52 @@
+.color {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+
+  &__info {
+    display: grid;
+    align-items: center;
+  }
+
+  &__name,
+  &__info {
+    font-size: 19px;
+    line-height: 29px;
+  }
+}
+
+.sample {
+  height: 70px;
+  width: 70px;
+  border-radius: 6px;
+  background: #aaa;
+  justify-self: flex-end;
+
+  &_color-dark-100 {
+    background: $dark-shade-100;
+  }
+
+  &_color-dark-75 {
+    background: $dark-shade-75;
+  }
+
+  &_color-dark-50 {
+    background: $dark-shade-50;
+  }
+
+  &_color-dark-25 {
+    background: $dark-shade-25;
+  }
+
+  &_color-dark-5 {
+    background: $dark-shade-5;
+  }
+
+  &_color-purple {
+    background: $purple;
+  }
+
+  &_color-green {
+    background: $green;
+  }
+}

@@ -1,0 +1,91 @@
+extends /pug/layout.pug
+
+block meta
+  include /blocks/header-ui/header-ui
+  include /blocks/colors/colors
+  include /blocks/types/types
+  title Colors & Type
+  meta(name='description' content='')
+
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+//- block nav
+//- +main-nav('10')
+block header
+  +header-ui(class="header__logo-ui")
+
+block main 
+  //- declarations
+  -
+    const colors_array = [
+      {
+        title: 'Dark Shade 100%', 
+        code: '#1F2041',
+        class: 'color-dark-100'
+      }, 
+      {
+        title: 'Dark Shade 75%', 
+        code: '#1F2041',
+        class: 'color-dark-75'
+      },
+      {
+        title: 'Dark Shade 50%', 
+        code: '#1F2041',
+        class: 'color-dark-50'
+      },
+      {
+        title: 'Dark Shade 25%', 
+        code: '#1F2041',
+        class: 'color-dark-25'
+      },
+      {
+        title: 'Dark Shade 5%', 
+        code: '#1F2041',
+        class: 'color-dark-5'
+      },
+      {
+        title: 'Purple', 
+        code: '#BC9CFF',
+        class: 'color-purple'
+      },
+      {
+        title: 'Green', 
+        code: '#6FCF97',
+        class: 'color-green'
+      }
+    ]
+  -
+    const types_array = [
+      {
+        title: 'H1',
+        example: 'This one is the sub-section or widget title',
+        class: 'h1'
+      },
+      {
+        title: 'H2',
+        example: 'Next one is the item title inside widgets',
+        class: 'h2'
+      },
+      {
+        title: 'H3',
+        example: 'This is a label or CTA text',
+        class: 'h3'
+      },
+      {
+        title: 'Body',
+        example: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+        class: 'body'
+      }
+    ]
+
+  //- page template
+  .main__ui-kit.ui-kit
+    +colors(colors_array)(class="ui-kit__colors")
+    +types(types_array)(class="ui-kit__types")
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

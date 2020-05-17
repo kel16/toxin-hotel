@@ -1,0 +1,55 @@
+//- doctype
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     meta(http-equiv="X-UA-Compatible" content="ie=edge")
+//-     title Form Elements
+//-   header.header
+//-     .header__logo
+//-       a(href="" class="header__logo")
+//-         img(src=require("../../images/logo-ui.png").default height="48" alt="")
+//-   body
+//-     .content__ui-kit.ui-kit
+//-       //- text fields
+//-       .ui-kit__group-1.group-1
+//-         div.form-control
+//-           label(for='email') 
+//-             .form-control__label.label
+//-               .label__name Text Field
+//-               .label__type Default
+//-             input#email.form-control(type='text' placeholder='E-mail' name='email')
+
+//-       //- checkbox, radio, toggle, like, rate btns
+//-       .ui-kit__group-2.group-2 checkbox buttons
+
+//-       //- range slider, buttons, paginator
+//-       .ui-kit__group-3.group-3
+//-         .group-3__range-slider.range-slider
+//-           input(type="text" class="js-range-slider" name="my_range" value="")
+
+extends /pug/layout.pug
+
+block meta
+  title Form elements
+  meta(name='description' content='')
+
+block main
+  .content__ui-kit.ui-kit
+    //- text fields
+    .ui-kit__group-1.group-1
+      div.form-control
+        label(for='email') 
+          .form-control__label.label
+            .label__name Text Field
+            .label__type Default
+          input#email.form-control(type='text' placeholder='E-mail' name='email')
+
+    //- checkbox, radio, toggle, like, rate btns
+    .ui-kit__group-2.group-2 checkbox buttons
+
+    //- range slider, buttons, paginator
+    .ui-kit__group-3.group-3
+      .group-3__range-slider.range-slider
+        input(type="text" class="js-range-values" value="100" disabled)
+        input(type="text" class="js-range-slider" name="my_range" value="" width="120")

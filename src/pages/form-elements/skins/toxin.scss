@@ -1,0 +1,86 @@
+$green: #6fcf97;
+$slider-height: 6px; // bar and handles proportional height
+
+/*.irs--big {
+  height: 55px;
+}
+.irs--big.irs-with-grid {
+  height: 70px;
+}*/
+.irs--big .irs-line {
+  top: 33px;
+  height: $slider-height;
+  background-color: white;
+  background: linear-gradient(to bottom, #fff -50%, white 150%);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: $slider-height/2;
+}
+.irs--big .irs-bar {
+  top: 33px;
+  height: $slider-height;
+  background-color: $green;
+  // background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border: 0px;
+  border-radius: $slider-height/2;
+  // border: 1px solid $green;
+  // box-shadow: inset 0 0 1px 1px $green;
+  box-shadow: none;
+}
+.irs--big .irs-bar--single {
+  border-radius: 12px 0 0 12px;
+}
+/*.irs--big .irs-shadow {
+  height: 1px;
+  bottom: 16px;
+  // background-color: rgba(66, 139, 202, 0.5);
+  background-color: rgba(255, 0, 0, 1);
+}*/
+.irs--big .irs-handle {
+  top: 29px;
+  width: $slider-height * 2.5;
+  height: $slider-height * 2.5;
+  border-radius: $slider-height * 1.25;
+  background: linear-gradient(180deg, $green 0%, #66d2ea 100%);
+  border: 2px solid #ffffff;
+  box-shadow: none;
+  // background-color: #cbcfd5;
+}
+.irs--big .irs-handle.state_hover,
+.irs--big .irs-handle:hover {
+  background: linear-gradient(180deg, $green 0%, #66d2ea 100%);
+  border: 2px solid #ffffff;
+
+  // border-color: rgba(0, 0, 0, 0.45);
+  // background-color: #939ba7;
+  // background: linear-gradient(to bottom, white 0%, #919ba5 30%, white 100%);
+}
+/*.irs--big .irs-min,
+.irs--big .irs-max {
+  top: 0;
+  padding: 1px 5px;
+  color: white;
+  text-shadow: none;
+  background-color: #9f9f9f;
+  border-radius: 3px;
+}*/
+/*.irs--big .irs-from,
+.irs--big .irs-to,
+.irs--big .irs-single {
+  color: white;
+  text-shadow: none;
+  padding: 1px 5px;
+  background-color: #ff0000;
+  background: linear-gradient(to bottom, #428bca 100%, #3071a9 0%);
+  border-radius: 3px;
+}*/
+/*.irs--big .irs-grid-pol {
+  // background-color: #428bca;
+  background-color: #ff0000;
+}
+.irs--big .irs-grid-text {
+  // color: #428bca;
+  background-color: #ff0000;
+}
+*/

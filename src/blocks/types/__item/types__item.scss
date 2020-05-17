@@ -1,0 +1,16 @@
+.type {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 30px;
+
+  &__title {
+    justify-self: end;
+    color: $dark-shade-25;
+    font-family: $font-body;
+    font-weight: 400;
+  }
+
+  &__example {
+    max-width: 336px;
+  }
+}

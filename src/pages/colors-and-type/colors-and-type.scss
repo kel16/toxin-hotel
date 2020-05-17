@@ -1,0 +1,33 @@
+@import '_/scss/variables';
+@import '_/blocks/colors/colors';
+@import '_/blocks/types/types';
+
+.header {
+  &__logo-ui {
+    padding: 30px;
+  }
+}
+
+.main {
+  max-width: 1099px;
+  // max-width: $max-width;
+
+  &__ui-kit {
+    padding-top: 37px;
+  }
+}
+
+.ui-kit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  // grid-template-columns: repeat(2, 1fr);
+  justify-items: flex-start;
+
+  &__colors {
+    margin-top: 0px;
+  }
+
+  &__types {
+    margin-top: 0px;
+  }
+}

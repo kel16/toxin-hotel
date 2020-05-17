@@ -1,0 +1,7 @@
+include __item/types__item
+
+mixin types(items)
+  ul.types&attributes(attributes)
+    each item in items
+      .types__item
+        +types__item(item.title, item.example, item.class)
