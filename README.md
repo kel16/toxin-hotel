@@ -3,7 +3,7 @@
 FSD frontend education program. The 2nd task
 https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/
 
-Requirements: Pug and Scss preprocessors, BEM methodology, Webpack.
+Requirements: Pug and SCSS preprocessors, BEM methodology, Webpack.
 
 ## Building and running on localhost
 

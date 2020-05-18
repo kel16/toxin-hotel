@@ -6,6 +6,7 @@
   "author": "kel16",
   "license": "ISC",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "webpack-dev-server --mode development",
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
@@ -28,6 +29,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "latest",
     "file-loader": "latest",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "latest",
     "lodash-webpack-plugin": "^0.11.5",
     "node-sass": "latest",
