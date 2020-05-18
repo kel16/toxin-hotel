@@ -1,5 +1,6 @@
 $green: #6fcf97;
 $slider-height: 6px; // bar and handles proportional height
+$top: 15px;
 
 /*.irs--big {
   height: 55px;
@@ -8,7 +9,8 @@ $slider-height: 6px; // bar and handles proportional height
   height: 70px;
 }*/
 .irs--big .irs-line {
-  top: 33px;
+  width: 240px;
+  top: $top;
   height: $slider-height;
   background-color: white;
   background: linear-gradient(to bottom, #fff -50%, white 150%);
@@ -17,7 +19,7 @@ $slider-height: 6px; // bar and handles proportional height
   border-radius: $slider-height/2;
 }
 .irs--big .irs-bar {
-  top: 33px;
+  top: $top;
   height: $slider-height;
   background-color: $green;
   // background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
@@ -38,7 +40,7 @@ $slider-height: 6px; // bar and handles proportional height
   background-color: rgba(255, 0, 0, 1);
 }*/
 .irs--big .irs-handle {
-  top: 29px;
+  top: $top - 4px;
   width: $slider-height * 2.5;
   height: $slider-height * 2.5;
   border-radius: $slider-height * 1.25;

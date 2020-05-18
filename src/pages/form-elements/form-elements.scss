@@ -1,5 +1,9 @@
-.js-range-values {
-  border: 0;
-  box-shadow: none;
-  background-color: #fff;
+.ui-kit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: flex-start;
+
+  &__form-control {
+    margin-bottom: 20px;
+  }
 }

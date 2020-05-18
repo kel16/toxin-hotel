@@ -1,0 +1,7 @@
+mixin slider(name)
+  .slider&attributes(attributes)
+    .slider__info
+      .slider__title.h3= name
+      .slider__values
+        input.slider__values(type="text", value="100", disabled)
+    input.slider__range(type="text", name="my_range", value="", width="120")

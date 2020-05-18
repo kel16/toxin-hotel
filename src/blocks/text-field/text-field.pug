@@ -1,0 +1,7 @@
+mixin text-field(name, placeholder, value, title, subtitle)
+  .text-field&attributes(attributes)
+    label(for=name) 
+      .text-field__label
+        .text-field__title.h3= title
+        .text-field__subtitle= subtitle
+      input.text-field(type="text", placeholder=placeholder, value=value, name=name)

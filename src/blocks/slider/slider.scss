@@ -1,0 +1,19 @@
+.slider {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__values {
+    border: 0;
+    box-shadow: none;
+    background-color: #fff;
+
+    text-align: end;
+  }
+}

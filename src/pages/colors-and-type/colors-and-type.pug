@@ -5,14 +5,14 @@ block meta
   include /blocks/colors/colors
   include /blocks/types/types
   title Colors & Type
-  meta(name='description' content='')
+  meta(name="description", content="")
 
 block header
-  +header-ui(class="header__logo-ui")
+  +header-ui.header__logo-ui
 
-block main 
-  - data = htmlWebpackPlugin.options.getData()
+block main
+  - data = htmlWebpackPlugin.options.getData();
 
   .main__ui-kit.ui-kit
-    +colors(data.colors)(class="ui-kit__colors")
-    +types(data.types)(class="ui-kit__types")
+    +colors(data.colors).ui-kit__colors
+    +types(data.types).ui-kit__types
